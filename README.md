@@ -26,9 +26,9 @@ API Key 和 Secret Key将由交易所系统随机生成。
 ### 发起请求
 所有REST请求都必须包含以下标题：
 
-* ACCESS-KEY API KEY作为一个字符串。
-* ACCESS-SIGN 使用base64编码签名（请参阅签名消息）。
-* ACCESS-TIMESTAMP 作为您的请求的时间戳。
+* ACCESS-KEY：API KEY作为一个字符串。
+* ACCESS-SIGN：使用base64编码签名（请参阅签名消息）。
+* ACCESS-TIMESTAMP：作为您的请求的时间戳。
 
 所有请求都应该含有application/json类型内容，并且是有效的JSON。
 
@@ -105,6 +105,13 @@ HTTP状态码200表示成功响应，并可能包含内容。如果响应含有�
 * 429 Too Many Requests 请求太频繁被系统限流
 * 500 Internal Server Error – We had a problem with our server 服务器内部错误
 * 如果失败，response body 带有错误描述信息
+
+#### response body 常见code
+* 200 成功请求无异常
+* 501 请求头中没有携带参数
+* 502 时间戳超时
+* 503 时间戳非数值型
+* 504 签名校验失败
 
 ### 分页
 部分返回数据集的REST请求支持使用游标分页。 游标分页允许在结果的当前页面之前和之后获取结果，并且非常适合于实时数据。根据当前的返回结果，后续请求可以在此基础之上指定请求数据的方向，可以请求在这之前和之后的数据。before和after游标可通过响应头CB_BEFORE和CB_AFTER使用。
