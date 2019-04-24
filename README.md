@@ -51,23 +51,23 @@ url "https://api.elitex.io/api/v1/orders?limit=100"
 ```
 Timestamp = 1540286290170
 Method = "GET"
-requestPath = "/api/v1/public/products/ETH-BTC/orderbook"
+requestPath = "/api/v1/public/ETH-BTC/orderbook"
 queryString= "?size=100"
 ```
 生成待签名的字符串
 ```
-Message = '1540286290170GET/api/v1/public/products/ETH-BTC/orderbook?size=100'  
+Message = '1540286290170GET/api/v1/public/ETH-BTC/orderbook?size=100'  
 ```
 * 下单，以 ETH-BTC 币对为例
 ```
 Timestamp = 1540286476248 
 Method = "POST"
-requestPath = "/api/v1/orders"
-body = {"code":"ETH_BTC","side":"buy","type":"limit","size":"1","price":"1.001"}
+requestPath = "/api/v1/order"
+body = {"code":"ETH_BTC","side":"buy","type":"limit","amount":"1","price":"1.001"}
 ```
 生成待签名的字符串
 ```
-Message = '1540286476248POST/api/v1/orders{"code":"LTC-BTC","side":"buy","type":"limit","size":"1","price":"1.001"}'  
+Message = '1540286476248POST/api/v1/order{"code":"LTC-BTC","side":"buy","type":"limit","amount":"1","price":"1.001"}'  
 ```
 然后，将待签名字符串添加私钥参数生成最终待签名字符串。
 
