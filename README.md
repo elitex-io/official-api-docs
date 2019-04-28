@@ -617,6 +617,7 @@ orderId|Integer|是|需要撤销的未成交委托的id
             "funds": 0,
             "id": 31479,
             "last": 1,
+            "avgPrice": 0,
             "price": 1,
             "side": "sell",
             "state": 4,
@@ -641,6 +642,7 @@ msg|返回信息
 -|-
 id|订单id
 code|币对代码，如ETH_BTC
+avgPrice|成交平均价,未成交则为0
 price|订单委托价格
 amount|订单委托数量
 funds|订单委托资金
@@ -674,6 +676,7 @@ pageSize|Integer|否|请求每页返回数据量，默认值20,最大值1000
             "funds": 0,
             "id": 31479,
             "last": 1,
+            "avgPrice": 0,
             "price": 1,
             "side": "sell",
             "state": 4,
@@ -697,6 +700,7 @@ msg|返回信息
 -|-
 id|订单id
 code|币对代码，如ETH_BTC
+avgPrice|成交平均价,未成交则为0
 price|订单委托价格
 amount|订单委托数量
 funds|订单委托资金
