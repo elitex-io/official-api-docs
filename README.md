@@ -647,6 +647,8 @@ price|订单委托价格
 amount|订单委托数量
 funds|订单委托资金
 last|剩余委托数量
+volume|成交量
+usedFunds|使用资金
 side|交易方向，买为buy，卖为sell
 type|订单类型，限价单为limit，市价单为market
 state|订单状态
@@ -705,6 +707,8 @@ price|订单委托价格
 amount|订单委托数量
 funds|订单委托资金
 last|剩余委托数量
+volume|成交量
+usedFunds|使用资金
 side|交易方向，买为buy，卖为sell
 type|订单类型，限价单为limit，市价单为market
 state|订单状态
